@@ -15,4 +15,4 @@ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 sudo apt autoremove -y
 sudo apt clean
-#sudo ufw enable
+# sudo ufw enable

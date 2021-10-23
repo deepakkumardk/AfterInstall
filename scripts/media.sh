@@ -2,10 +2,10 @@
 echo "Installing Media Applications"
 sleep 2
 
-#sudo add-apt-repository ppa:ubuntuhandbook1/gimp
-#sudo add-apt-repository ppa:inkscape.dev/stable
-#sudo add-apt-repository ppa:kdenlive/kdenlive-stable
-#sudo add-apt-repository ppa:videolan/master-daily
+# sudo add-apt-repository ppa:ubuntuhandbook1/gimp
+# sudo add-apt-repository ppa:inkscape.dev/stable
+# sudo add-apt-repository ppa:kdenlive/kdenlive-stable
+# sudo add-apt-repository ppa:videolan/master-daily
 
 sudo apt install snapd
 
@@ -17,4 +17,3 @@ sudo snap install ffmpeg
 sudo snap install telegram-desktop
 sudo snap install audacity
 sudo snap connect audacity:alsa
-
