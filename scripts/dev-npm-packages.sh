@@ -5,5 +5,5 @@ sleep 1
 nvm ls
 nvm install --lts
 
-npm install -g yarn lerna
+npm install -g lerna yarn yalc
 # Not Installing typescript as having tssc in project dependency is good.
