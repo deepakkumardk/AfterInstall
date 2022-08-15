@@ -1,6 +1,4 @@
 #!/bin/bash
-echo "Installing Dev Applications"
-sleep 1
 
 echo "Enter name for git config global user.name"
 read git_config_user_name
@@ -8,13 +6,14 @@ read git_config_user_name
 echo "Enter email for git config global user.name"
 read git_config_user_email
 
+echo "Installing Dev Applications"
+
+echo "Setup You Personal Access Token (PAT) While we are downloading some important dev apps."
 
 sudo apt install git -y
 git config --global user.name "$git_config_user_name"
 git config --global user.email "$git_config_user_email"
 git config --global credential.helper cache --timeout=3600
-echo "Setup You Personal Access Token (PAT) While we are downloading some important dev apps."
-sleep 4
 
 sudo apt install curl libssl-dev
 sudo apt install build-essential -y
@@ -27,7 +26,7 @@ sudo snap install postman
 sudo snap install --classic code
 
 # Update the following version as per the latest
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 sleep 2
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

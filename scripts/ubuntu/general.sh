@@ -1,9 +1,9 @@
 #!/bin/bash
 echo "Installing General Applications"
-sleep 2
 
 sudo apt update && sudo apt upgrade -y
 
+sudo apt install libfuse2
 sudo apt install ubuntu-restricted-extras -y
 sudo apt install gnome-tweaks
 sudo apt install chrome-gnome-shell -y
