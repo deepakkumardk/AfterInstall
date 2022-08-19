@@ -1,21 +1,12 @@
 #!/bin/bash
 echo "Installing Media Applications"
-sleep 2
 
-# sudo add-apt-repository ppa:ubuntuhandbook1/gimp
-# sudo add-apt-repository ppa:inkscape.dev/stable
-# sudo add-apt-repository ppa:kdenlive/kdenlive-stable
-# sudo add-apt-repository ppa:videolan/master-daily
+sudo apt install ffmpeg -y
 
+flatpak install flathub org.gimp.GIMP -y
+flatpak install flathub org.inkscape.Inkscape -y
+flatpak install flathub org.kde.kdenlive -y
+flatpak install flathub org.telegram.desktop -y
+flatpak install flathub org.audacityteam.Audacity -y
+flatpak install flathub org.videolan.VLC -y
 
-sudo apt install kazam -Y
-sudo apt install snapd -Y
-
-sudo snap install gimp
-sudo snap install inkscape
-sudo snap install kdenlive
-sudo snap install vlc
-sudo snap install ffmpeg
-sudo snap install telegram-desktop
-sudo snap install audacity
-sudo snap connect audacity:alsa

@@ -1,9 +1,7 @@
 #!/bin/bash
-echo "Installing Dev Applications"
-sleep 2
+echo "Installing Mobile Dev Applications"
 
-sudo apt-get install openjdk-8-jdk -y
-sudo apt install net-tools -y
+sudo apt install openjdk-8-jdk net-tools -y
 sudo apt install android-tools-adb android-tools-fastboot -y
 
 echo "export ANDROID_HOME=$HOME/Android/Sdk" >> ~/.bashrc
@@ -12,7 +10,8 @@ source ~/.bashrc
 # Enable KVM
 sudo apt install cpu-checker -y
 kvm-ok
-sudo apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
+sudo apt install qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager -y
+
 sudo systemctl status libvirtd
 sudo systemctl enable --now libvirtd
 lsmod | grep -i kvm

@@ -1,13 +1,15 @@
 #!/bin/bash
 echo "Installing Misc. Applications"
-sleep 2
 
 # sudo apt install rar unrar p7zip-full p7zip-rar
-sudo snap install chromium
-sudo apt install ls cloc
+sudo apt install ls cloc i3 -y
+flatpak install flathub com.google.Chrome -y
+flatpak install flathub org.chromium.Chromium -y
 
 # Joplin
-wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
+flatpak install flathub net.cozic.joplin_desktop -y
+
+flatpak install flathub com.github.tchx84.Flatseal -y
 
 # Drivers
 ubuntu-drivers devices
