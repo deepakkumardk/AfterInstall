@@ -6,7 +6,5 @@ chmod +x ./*
 ./dev.sh
 ./ui.sh
 ./mobile-dev.sh
-./media.sh
-
-
-#gnome-terminal -- ./dev-npm-packages.sh
+./misc.sh
+./dev-npm-packages.sh

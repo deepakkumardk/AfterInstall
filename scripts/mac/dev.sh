@@ -27,7 +27,7 @@ source ~/.zshrc
 command -v nvm
 
 brew install nvm
-  mkdir ~/.nvm
+mkdir ~/.nvm
 
 echo "Run command 'nvm ls', if you see error then reopen the terminal and then continue."
 

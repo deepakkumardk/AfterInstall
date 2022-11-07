@@ -30,4 +30,4 @@ export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 
 export PATH=/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.0.0/bin:$HOME/Library/Android/sdk/platform-tools:$PATH
 
-# install network link contioner
+# NOTE: Install network link contioner

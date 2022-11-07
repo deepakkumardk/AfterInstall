@@ -6,4 +6,4 @@ nvm ls
 nvm install --lts
 
 npm install -g lerna yalc
-# Not Installing typescript as having tssc in project dependency is good.
+# Not Installing typescript as having tsc in project dependency is good.
