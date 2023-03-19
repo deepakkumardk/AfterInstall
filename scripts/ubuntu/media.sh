@@ -9,4 +9,3 @@ flatpak install flathub org.kde.kdenlive -y
 flatpak install flathub org.telegram.desktop -y
 flatpak install flathub org.audacityteam.Audacity -y
 flatpak install flathub org.videolan.VLC -y
-
