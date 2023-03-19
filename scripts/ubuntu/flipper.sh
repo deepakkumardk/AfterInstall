@@ -1,3 +1,5 @@
+#!/bin/bash
+# Run this scirpt after downloading the Flipper from https://fbflipper.com/
 cd Downloads
 wget "https://fbflipper.com/img/icon.png" -O icon.png
 

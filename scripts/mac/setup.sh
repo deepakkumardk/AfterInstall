@@ -1,12 +1,12 @@
 #!/bin/bash
+echo "Setting up your OS"
 
-chmod +x ./*
+chmod +x ./*.sh
 
 ./genral.sh
 ./dev.sh
 ./ui.sh
 ./mobile-dev.sh
-./media.sh
+source ~/.nvm/nvm.sh
+./dev-npm-packages.sh
 
-
-#gnome-terminal -- ./dev-npm-packages.sh

@@ -4,7 +4,6 @@ else
   sh -c "$(wget -O- https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
 fi
 
-source ~/.zshrc
 source ~/.nvm/nvm.sh
 
 echo "export ANDROID_HOME=$HOME/Android/Sdk" >> ~/.zshrc
