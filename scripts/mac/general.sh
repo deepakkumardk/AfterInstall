@@ -2,7 +2,7 @@
 echo "Installing General Applications"
 sleep 2
 
-brew install --cask stats
+brew install --cask rectangle stats firefox google-chrome
 
 # Set default finder folder
 # Set backspace/delete speed, keyboard -> key repeat

@@ -1,9 +1,7 @@
 #!/bin/bash
 echo "Installing Dev Applications"
 
-brew install adoptopenjdk14
-brew install yarn
-brew install watchman
+brew install adoptopenjdk14 yarn watchman
 
 brew tap homebrew/cask-versions
 brew install --cask zulu11
@@ -16,10 +14,9 @@ echo "export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools" >> ~/.zshrc
 
 source ~/.zshrc
 
-gem install ffi
-gem install cocoapods
+gem install ffi cocoapods
 
-brew install ruby
+brew install ruby scrcpy
 
 export PATH=/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.0.0/bin:$PATH
 export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"

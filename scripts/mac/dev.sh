@@ -1,10 +1,10 @@
 #!/bin/bash
 echo "Installing Dev Applications"
 
-echo "Enter name for git config global user.name"
+echo "Enter name (global user.name)"
 read git_config_user_name
 
-echo "Enter email for git config global user.name"
+echo "Enter email (global user.email)"
 read git_config_user_email
 
 # https://gist.github.com/bradp/bea76b16d3325f5c47d4
@@ -34,25 +34,25 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-brew install python
-brew install cloc tree
+brew list
 
-brew install --cask postman
-brew install --cask visual-studio-code
+brew install python cloc tree
+
+brew install --cask visual-studio-code postman
 
 # Install nvm
 
 # Update the following version as per the latest
 touch ~/.zshrc
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+# wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 echo 'export PATH="/opt/homebrew/opt/curl/bin:$PATH"' >> ~/.zshrc
 export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
 
 sleep 1
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source ~/.zshrc
 command -v nvm

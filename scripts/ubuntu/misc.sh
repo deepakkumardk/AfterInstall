@@ -6,9 +6,6 @@ sudo apt install ls cloc i3 -y
 flatpak install flathub com.google.Chrome -y
 flatpak install flathub org.chromium.Chromium -y
 
-# Joplin
-# flatpak install flathub net.cozic.joplin_desktop -y
-
 flatpak install flathub com.github.tchx84.Flatseal -y
 
 # Drivers

@@ -1,10 +1,10 @@
 #!/bin/bash
 echo "Installing Dev Applications"
 
-echo "Enter name for git config global user.name"
+echo "Enter name (global user.name)"
 read git_config_user_name
 
-echo "Enter email for git config global user.name"
+echo "Enter email (global user.email)"
 read git_config_user_email
 
 echo "Installing Dev Applications"
@@ -14,6 +14,7 @@ echo "Setup You Personal Access Token (PAT) While we are downloading some import
 sudo apt install git -y
 git config --global user.name "$git_config_user_name"
 git config --global user.email "$git_config_user_email"
+git config --global core.editor "nano"
 git config --global credential.helper cache --timeout=3600
 
 echo "Setting up SSH"

@@ -2,4 +2,4 @@
 echo "Installing UI Applications"
 sleep 2
 
-# Install TiknerTool, Stats, Alfred
+# Install TiknerTool, Stats, Alfred, CopyClip, Rectangle
