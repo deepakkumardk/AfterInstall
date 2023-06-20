@@ -4,10 +4,8 @@ echo "Setting up your Macbook"
 chmod +x ./*.sh
 
 ./dev.sh
-./genral.sh
+./general.sh
 ./ui.sh
 ./mobile-dev.sh
-source ~/.nvm/nvm.sh
 ./dev-npm-packages.sh
 ./zsh.sh
-

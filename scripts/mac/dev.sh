@@ -28,15 +28,15 @@ echo "SSH key copied, paste this into the github/bitbcuket."
 # https://www.section.io/engineering-education/using-multiple-ssh-keys-for-multiple-github-accounts/
 
 
-# Install if we don't have it
-if test ! $(which brew); then
-  echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+echo "Installing homebrew..."
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Setup path for brew
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew list
-
-brew install python cloc tree
+brew install python cloc tree wget
 
 brew install --cask visual-studio-code postman
 
@@ -45,19 +45,31 @@ brew install --cask visual-studio-code postman
 # Update the following version as per the latest
 touch ~/.zshrc
 # wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-echo 'export PATH="/opt/homebrew/opt/curl/bin:$PATH"' >> ~/.zshrc
-export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
+# echo 'export PATH="/opt/homebrew/opt/curl/bin:$PATH"' >> ~/.zshrc
+# export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
+# export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
 
-sleep 1
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# If you need to have ruby first in your PATH, run:
+echo 'export PATH="/opt/homebrew/opt/ruby/bin:$PATH"' >> ~/.zshrc
 
+# For compilers to find ruby you may need to set:
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 source ~/.zshrc
-command -v nvm
 
 brew install nvm
+command -v nvm
 mkdir ~/.nvm
+
+# You should create NVM's working directory if it doesn't exist:
+mkdir ~/.nvm
+
+# Add the following to your shell profile e.g. ~/.profile or ~/.zshrc:
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+source ~/.zshrc
+source ~/.nvm/nvm.sh
 
 echo "Run command 'nvm ls', if you see error then reopen the terminal and then continue."
