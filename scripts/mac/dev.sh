@@ -60,17 +60,19 @@ source ~/.zshrc
 
 brew install nvm
 command -v nvm
-mkdir ~/.nvm
-
 # You should create NVM's working directory if it doesn't exist:
 mkdir ~/.nvm
+
+echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+echo '[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"' >> ~/.zshrc
+echo '[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"' >> ~/.zshrc
 
 # Add the following to your shell profile e.g. ~/.profile or ~/.zshrc:
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-read -r -s -p $'\nPress enter to continue...'
+# read -r -s -p $'\nPress enter to continue...'
 
 source ~/.zshrc
 source ~/.nvm/nvm.sh
