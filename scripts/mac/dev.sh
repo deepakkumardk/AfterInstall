@@ -19,10 +19,11 @@ echo "Setting up SSH"
 ssh-keygen -t ed25519 -C "$git_config_user_email"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
-cat id_rsa.pub | pbcopy
+cat id_ed25519.pub | pbcopy
 
 read -r -s -p $'\nPress enter to continue...'
-ssh -T git@github.com # or use bitbucket
+# ssh -T git@github.com # or use bitbucket
+ssh -T git@bitbucket.org
 echo "SSH key copied, paste this into the github/bitbcuket."
 # Multiple SSH key setup
 # https://www.section.io/engineering-education/using-multiple-ssh-keys-for-multiple-github-accounts/
@@ -68,6 +69,8 @@ mkdir ~/.nvm
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+read -r -s -p $'\nPress enter to continue...'
 
 source ~/.zshrc
 source ~/.nvm/nvm.sh
