@@ -2,13 +2,13 @@
 echo "Installing Dev Applications"
 
 brew install openjdk@11
+echo 'export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"' >> ~/.zshrc
+exec zsh
+javac --version
 brew install yarn watchman
 
-brew tap homebrew/cask-versions
-brew install --cask zulu
-
-brew install --cask androidtool
-brew install android-platform-tools scrcpy
+brew install --cask androidtool android-platform-tools
+brew install scrcpy
 brew install ruby
 
 # Note: To install ruby uncomment below line
@@ -34,7 +34,7 @@ echo "export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk" >> ~/.zshrc
 echo "export PATH=$PATH:$ANDROID_SDK_ROOT/emulator" >> ~/.zshrc
 echo "export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools" >> ~/.zshrc
 
-source ~/.zshrc
+exec zsh
 
 export PATH=/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.0.0/bin:$HOME/Library/Android/sdk/platform-tools:$PATH
 
@@ -42,6 +42,7 @@ brew tap facebook/fb
 brew install idb-companion
 brew install pip3
 pip3 install fb-idb
+python3 -m pip install --upgrade pip
 
 echo "Intall AndroidStudio from the website to defer any node related errors"
 

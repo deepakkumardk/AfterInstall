@@ -56,7 +56,7 @@ echo 'export PATH="/opt/homebrew/opt/ruby/bin:$PATH"' >> ~/.zshrc
 # For compilers to find ruby you may need to set:
 export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
-source ~/.zshrc
+exec zsh
 
 brew install nvm
 command -v nvm
@@ -72,9 +72,7 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# read -r -s -p $'\nPress enter to continue...'
-
-source ~/.zshrc
+exec zsh
 source ~/.nvm/nvm.sh
 
 echo "Run command 'nvm ls', if you see error then reopen the terminal and then continue."
