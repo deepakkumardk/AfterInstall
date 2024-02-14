@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Installing Dev Applications"
 
-brew install openjdk@11
+brew install --cask adoptopenjdk
 echo 'export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"' >> ~/.zshrc
 exec zsh
 javac --version
@@ -10,6 +10,11 @@ brew install yarn watchman
 brew install --cask androidtool android-platform-tools
 brew install scrcpy
 brew install ruby
+brew install jenv
+echo eval "$(jenv init -)" >> ~/.bashrc
+echo eval "$(jenv init -)" >> ~/.zshrc
+jenv versions
+jenv doctor
 
 # Note: To install ruby uncomment below line
 # brew install chruby ruby-install

@@ -8,6 +8,12 @@ echo "export ANDROID_HOME=$HOME/Android/Sdk" >> ~/.bashrc
 echo "export PATH=$PATH:$ANDROID_HOME/emulator" >> ~/.bashrc
 echo "export PATH=$PATH:$ANDROID_HOME/platform-tools" >> ~/.bashrc
 
+brew install jenv
+echo eval "$(jenv init -)" >> ~/.bashrc
+echo eval "$(jenv init -)" >> ~/.zshrc
+jenv versions
+jenv doctor
+
 source ~/.bashrc
 
 # Enable KVM
